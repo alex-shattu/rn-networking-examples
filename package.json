@@ -3,33 +3,71 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "locales": "node src/locales/common.js",
+    "pods": "cd ios && pod install && cd ..",
+    "postinstall": "yarn pods && yarn nodeify",
+    "reinstall": "rm -rf node_modules && rm -rf ios/Pods && rm -rf ios/Podfile.lock && yarn",
+    "nodeify": "rn-nodeify --install stream,process,util --hack",
     "lint": "eslint ."
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.8.10",
+    "i18next": "^19.8.4",
     "react": "16.13.1",
+    "react-i18next": "^11.8.5",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.9.0",
+    "react-native-locale-detector": "^1.0.1",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
-    "react-native-screens": "^2.16.1"
+    "react-native-screens": "^2.16.1",
+    "react-native-tcp": "^4.0.0",
+    "readable-stream": "^1.0.33",
+    "rn-nodeify": "^10.2.0",
+    "stream-browserify": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
-    "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^25.1.0",
-    "eslint": "^6.5.1",
-    "jest": "^25.1.0",
-    "metro-react-native-babel-preset": "^0.59.0",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-optional-require": "^0.3.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react-native": "^3.9.1",
+    "jest": "^26.6.3",
+    "jest-date-mock": "^1.0.8",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "react-native-bundle-visualizer": "^2.2.1",
+    "react-native-flipper": "^0.69.0",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "react-native": {
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify"
+  },
+  "browser": {
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify"
   }
 }

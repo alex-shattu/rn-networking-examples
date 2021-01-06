@@ -1,0 +1,14 @@
+const HTTP_SCREEN = 'HTTP_SCREEN';
+const TCP_SCREEN = 'TCP_SCREEN';
+const FTP_SCREEN = 'FTP_SCREEN';
+const UDP_SCREEN = 'UDP_SCREEN';
+// const *_SCREEN = '*_SCREEN';
+const HOME_SCREEN = 'HOME_SCREEN';
+
+export default {
+  HOME_SCREEN,
+  TCP_SCREEN,
+  UDP_SCREEN,
+  HTTP_SCREEN,
+  FTP_SCREEN,
+};
