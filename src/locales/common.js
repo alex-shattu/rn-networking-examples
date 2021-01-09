@@ -13,18 +13,26 @@ const common = {
     en: 'Home',
     ru: 'Главная',
   },
-  header_title_http: {
-    en: 'HTTP',
-    ru: 'HTTP',
+  port: {
+    en: 'Port',
+    ru: 'Порт',
   },
-  // '': {
-  //   en: '',
-  //   ru: '',
-  // },
-  // '': {
-  //   en: '',
-  //   ru: '',
-  // },
+  request_body: {
+    en: 'Request body',
+    ru: 'Тело запроса',
+  },
+  response_body: {
+    en: 'Response body',
+    ru: 'Тело ответа',
+  },
+  logs: {
+    en: 'Logs',
+    ru: 'Логи',
+  },
+  run: {
+    en: 'Run',
+    ru: 'Запустить',
+  },
   // '': {
   //   en: '',
   //   ru: '',

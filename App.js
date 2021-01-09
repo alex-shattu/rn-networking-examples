@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import screenNames from '~/constants/screensNames';
 import Home from '~/screens/Home';
 import HTTP from '~/screens/HTTP/';
+import TCP from '~/screens/TCP/';
+import FTP from '~/screens/FTP/';
 
 enableScreens();
 const Stack = createNativeStackNavigator();
@@ -26,7 +28,21 @@ const App = () => {
           name={screenNames.HTTP_SCREEN}
           component={HTTP}
           options={{
-            headerTitle: t('header_title_http'),
+            headerTitle: 'HTTP',
+          }}
+        />
+        <Stack.Screen
+          name={screenNames.TCP_SCREEN}
+          component={TCP}
+          options={{
+            headerTitle: 'TCP',
+          }}
+        />
+        <Stack.Screen
+          name={screenNames.FTP_SCREEN}
+          component={FTP}
+          options={{
+            headerTitle: 'FTP',
           }}
         />
         {/* <Stack.Screen name="Notifications" component={Notifications} />

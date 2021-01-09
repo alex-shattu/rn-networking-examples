@@ -3,6 +3,10 @@
     "header_title_example": "Example",
     "header_title_description": "Description",
     "header_title_home": "Home",
-    "header_title_http": "HTTP"
+    "port": "Port",
+    "request_body": "Request body",
+    "response_body": "Response body",
+    "logs": "Logs",
+    "run": "Run"
   }
 }
